@@ -1,4 +1,5 @@
 import { buildMetadata, breadcrumbSchema } from '@/lib/seo'
+import { PageHeader } from '@/components/PageHeader'
 
 export const metadata = buildMetadata({
   title: 'Terms of Use',
@@ -10,11 +11,10 @@ export default function TermsPage() {
   const breadcrumb = breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Terms', url: '/terms' }])
 
   return (
-    <div className="py-20">
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <div className="section-container max-w-3xl">
-        <p className="text-label text-brand-electric mb-3">Legal</p>
-        <h1 className="text-headline text-gray-900 mb-8">Terms of Use</h1>
+      <PageHeader eyebrow="Legal" title="Terms of Use" breadcrumb={[{ name: 'Home', href: '/' }, { name: 'Terms', href: '/terms' }]} />
+      <div className="section-container max-w-3xl py-16">
         <div className="prose-content">
           <p>This site is operated by SubZeroMetrix LLC on behalf of The Modern Trades Mentor.</p>
           <h2>Product Status</h2>

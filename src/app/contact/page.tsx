@@ -1,4 +1,5 @@
 import { buildMetadata, breadcrumbSchema } from '@/lib/seo'
+import { PageHeader } from '@/components/PageHeader'
 
 export const metadata = buildMetadata({
   title: 'Request Info',
@@ -10,11 +11,10 @@ export default function ContactPage() {
   const breadcrumb = breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact' }])
 
   return (
-    <div className="py-20">
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <div className="section-container max-w-lg">
-        <p className="text-label text-brand-electric mb-3">Request Info</p>
-        <h1 className="text-headline text-gray-900 mb-4">Talk to Us About Modern Trades CRM</h1>
+      <PageHeader eyebrow="Request Info" title="Talk to Us About Modern Trades CRM" breadcrumb={[{ name: 'Home', href: '/' }, { name: 'Contact', href: '/contact' }]} />
+      <div className="section-container max-w-lg py-16">
         <p className="text-body-lg mb-8">
           A live request form isn&apos;t connected on this site yet -- we don&apos;t want to collect information into
           a form that isn&apos;t actually wired up. In the meantime, reach us through the working contact form on

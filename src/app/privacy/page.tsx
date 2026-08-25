@@ -1,4 +1,5 @@
 import { buildMetadata, breadcrumbSchema } from '@/lib/seo'
+import { PageHeader } from '@/components/PageHeader'
 
 export const metadata = buildMetadata({
   title: 'Privacy Policy',
@@ -10,11 +11,10 @@ export default function PrivacyPage() {
   const breadcrumb = breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Privacy', url: '/privacy' }])
 
   return (
-    <div className="py-20">
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <div className="section-container max-w-3xl">
-        <p className="text-label text-brand-electric mb-3">Privacy</p>
-        <h1 className="text-headline text-gray-900 mb-8">Privacy Policy</h1>
+      <PageHeader eyebrow="Privacy" title="Privacy Policy" breadcrumb={[{ name: 'Home', href: '/' }, { name: 'Privacy', href: '/privacy' }]} />
+      <div className="section-container max-w-3xl py-16">
         <div className="prose-content">
           <p>Modern Trades CRM is offered nationally by SubZeroMetrix LLC, built by The Modern Trades Mentor.</p>
           <h2>Analytics</h2>

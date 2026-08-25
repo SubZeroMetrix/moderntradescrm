@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { buildMetadata, organizationSchema, breadcrumbSchema } from '@/lib/seo'
+import { PageHeader } from '@/components/PageHeader'
 
 export const metadata = buildMetadata({
   title: 'Capabilities',
@@ -11,18 +12,16 @@ export default function CapabilitiesPage() {
   const breadcrumb = breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Capabilities', url: '/capabilities' }])
 
   return (
-    <div className="py-20">
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <div className="section-container max-w-3xl">
-        <p className="text-label text-brand-electric mb-3">Capabilities</p>
-        <h1 className="text-headline text-gray-900 mb-6">What&apos;s Actually Verified Working</h1>
-        <p className="text-body-lg mb-12">
-          Modern Trades CRM is being built by a working contractor consultant, not marketed ahead of what exists.
-          This page reflects our own internal capability review -- updated as things actually get built, not as
-          they get planned.
-        </p>
-
+      <PageHeader
+        eyebrow="Capabilities"
+        title="What's Actually Verified Working"
+        description="Modern Trades CRM is being built by a working contractor consultant, not marketed ahead of what exists. This page reflects our own internal capability review -- updated as things actually get built, not as they get planned."
+        breadcrumb={[{ name: 'Home', href: '/' }, { name: 'Capabilities', href: '/capabilities' }]}
+      />
+      <div className="section-container max-w-3xl py-16">
         <h2 className="text-subhead text-gray-900 mb-5">Verified Working Today</h2>
         <div className="space-y-4 mb-12">
           <div className="card-panel border-emerald-200 bg-emerald-50/40">

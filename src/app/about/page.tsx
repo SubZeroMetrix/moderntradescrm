@@ -1,4 +1,5 @@
 import { buildMetadata, organizationSchema, breadcrumbSchema } from '@/lib/seo'
+import { PageHeader } from '@/components/PageHeader'
 
 export const metadata = buildMetadata({
   title: 'About & Disclosure',
@@ -10,12 +11,11 @@ export default function AboutPage() {
   const breadcrumb = breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'About', url: '/about' }])
 
   return (
-    <div className="py-20">
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <div className="section-container max-w-3xl">
-        <p className="text-label text-brand-electric mb-3">About</p>
-        <h1 className="text-headline text-gray-900 mb-8">About Modern Trades CRM</h1>
+      <PageHeader eyebrow="About" title="About Modern Trades CRM" breadcrumb={[{ name: 'Home', href: '/' }, { name: 'About', href: '/about' }]} />
+      <div className="section-container max-w-3xl py-16">
         <div className="prose-content">
           <p>
             Modern Trades CRM is built by <strong>The Modern Trades Mentor (TMT)</strong>, a contractor operations
