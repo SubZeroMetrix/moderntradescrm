@@ -150,7 +150,7 @@ export function RequestAccessForm() {
       <button type="submit" disabled={status === 'submitting'} className="btn-primary disabled:opacity-50">
         {status === 'submitting' ? 'Submitting...' : 'Request Access'}
       </button>
-      <p className="text-xs text-gray-400">No pricing, checkout, or free trial exists yet -- this starts a conversation, not a purchase.</p>
+      <p className="text-xs text-gray-500">No pricing, checkout, or free trial exists yet -- this starts a conversation, not a purchase.</p>
     </form>
   )
 }

@@ -13,7 +13,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Product</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Product</p>
             <ul className="space-y-2 text-sm">
               <li><Link href="/capabilities" className="hover:text-white transition-colors">Capabilities</Link></li>
               <li><Link href="/revenue-recovery" className="hover:text-white transition-colors">Revenue Recovery</Link></li>
@@ -29,7 +29,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Legal</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Legal</p>
             <ul className="space-y-2 text-sm">
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link></li>
@@ -38,7 +38,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <p className="text-xs text-gray-600 border-t border-white/10 pt-6">
+        <p className="text-xs text-gray-400 border-t border-white/10 pt-6">
           &copy; {new Date().getFullYear()} SubZeroMetrix LLC. Capability descriptions on this site reflect what has
           been verified working as of the last internal review -- not a complete or final feature set.
         </p>

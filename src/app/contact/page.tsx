@@ -23,7 +23,7 @@ export default function ContactPage() {
         <div className="card-panel">
           <a href="https://www.subzerometrix.com/contact?subject=Modern+Trades+CRM+interest" className="btn-primary inline-block">Contact SubZeroMetrix</a>
         </div>
-        <p className="text-xs text-gray-400 mt-6">
+        <p className="text-xs text-gray-500 mt-6">
           No pricing, checkout, or free trial exists yet for this product -- reaching out starts a conversation, not a purchase.
         </p>
       </div>
