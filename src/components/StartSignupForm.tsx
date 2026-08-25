@@ -29,6 +29,7 @@ export function StartSignupForm({ defaultPlan }: { defaultPlan: string }) {
   const [errorMsg, setErrorMsg] = useState('')
   const [emailConsent, setEmailConsent] = useState(false)
   const [smsConsent, setSmsConsent] = useState(false)
+  const [submittedPlan, setSubmittedPlan] = useState(defaultPlan)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -69,6 +70,7 @@ export function StartSignupForm({ defaultPlan }: { defaultPlan: string }) {
       })
       const json = await res.json()
       if (json.success) {
+        setSubmittedPlan(String(data.get('plan') || defaultPlan))
         setStatus('success')
       } else {
         setStatus('error')
@@ -84,12 +86,24 @@ export function StartSignupForm({ defaultPlan }: { defaultPlan: string }) {
     return (
       <div className="card-panel" role="status" aria-live="polite">
         <p className="font-semibold text-gray-900 mb-2">Your Modern Trades CRM setup request has been received.</p>
-        <p className="text-sm text-gray-600 mb-4">
-          No charge has been made. We&apos;ll confirm your selected plan, applicable usage charges, and activation
-          requirements before billing begins.
+        <p className="text-sm text-gray-700 mb-4">
+          Plan you selected: <strong>{PLAN_OPTIONS.find((p) => p.value === submittedPlan)?.label || submittedPlan}</strong>
         </p>
+        <div className="rounded-lg bg-gray-50 border border-gray-200 p-4 text-sm text-gray-700 mb-4">
+          <p className="font-semibold text-gray-900 mb-2">What this is, and what it isn&apos;t</p>
+          <p className="mb-2">
+            <strong>No charge has been made.</strong> This request did <strong>not</strong> create an account,
+            a subscription, or a trial, and no payment information was collected.
+          </p>
+          <p>
+            What happens next: a real person reviews your request, confirms the plan and any applicable usage
+            charges (phone, SMS, email, AI), and walks through what setup involves for your business. Nothing is
+            activated or billed until you agree to it.
+          </p>
+        </div>
         <div className="flex flex-col sm:flex-row gap-3">
           <a href="/capabilities" className="btn-secondary text-center">See What&apos;s Verified Working</a>
+          <a href="/implementation" className="btn-outline-visible text-center">How Implementation Works</a>
         </div>
       </div>
     )
@@ -169,10 +183,11 @@ export function StartSignupForm({ defaultPlan }: { defaultPlan: string }) {
       )}
 
       <button type="submit" disabled={status === 'submitting'} className="btn-primary disabled:opacity-50">
-        {status === 'submitting' ? 'Submitting...' : 'Start Now'}
+        {status === 'submitting' ? 'Submitting...' : 'Start Setup'}
       </button>
       <p className="text-xs text-gray-500">
-        This starts a real setup request, not automated billing. No charge is made by submitting this form.
+        Submitting this sends a setup request. It does not create an account, subscription, or trial, and no
+        payment information is collected. We confirm your plan and any usage charges before anything is activated.
       </p>
     </form>
   )

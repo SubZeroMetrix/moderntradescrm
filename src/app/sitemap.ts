@@ -4,10 +4,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.moderntradescrm.com'
   const now = new Date().toISOString()
   const staticRoutes = [
-    '', '/pricing', '/start', '/capabilities', '/revenue-recovery', '/for-hvac', '/for-plumbing', '/for-electrical', '/for-roofing',
+    '', '/pricing', '/start', '/capabilities', '/revenue-recovery',
+    '/for-hvac', '/for-plumbing', '/for-electrical', '/for-roofing',
+    '/for-tree-service', '/for-garage-door', '/for-pest-control', '/for-cleaning-businesses',
     '/security', '/implementation', '/support', '/request-access', '/ownership-disclosure', '/about', '/contact', '/privacy', '/terms',
   ]
-  const highPriority = ['/pricing', '/start', '/capabilities', '/revenue-recovery', '/for-hvac', '/for-plumbing', '/for-electrical', '/for-roofing']
+  const highPriority = [
+    '/pricing', '/start', '/capabilities', '/revenue-recovery',
+    '/for-hvac', '/for-plumbing', '/for-electrical', '/for-roofing',
+    '/for-tree-service', '/for-garage-door', '/for-pest-control', '/for-cleaning-businesses',
+  ]
 
   return staticRoutes.map((route) => ({
     url: `${siteUrl}${route}`,

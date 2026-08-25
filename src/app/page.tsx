@@ -33,7 +33,7 @@ export default function HomePage() {
               field-service software that already runs your jobs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/pricing" className="btn-primary">Start Now -- From $99/month</Link>
+              <Link href="/pricing" className="btn-primary">Start Setup -- Plans From $99/month</Link>
               <Link href="/pricing" className="btn-outline-visible !text-white !border-white/40">Compare Plans</Link>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function HomePage() {
             affiliate. Starting a setup request does not mean automated billing has begun -- we confirm your plan,
             usage charges, and activation requirements before anything is charged.
           </p>
-          <Link href="/start" className="text-brand-electric underline">Start Now</Link>
+          <Link href="/start" className="text-brand-electric underline">Start Setup</Link>
         </div>
       </section>
     </div>

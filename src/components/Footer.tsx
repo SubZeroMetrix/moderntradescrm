@@ -15,7 +15,7 @@ export function Footer() {
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Product</p>
             <ul className="space-y-2 text-sm">
               <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-              <li><Link href="/start" className="hover:text-white transition-colors">Start Now</Link></li>
+              <li><Link href="/start" className="hover:text-white transition-colors">Start Setup</Link></li>
               <li><Link href="/capabilities" className="hover:text-white transition-colors">Capabilities</Link></li>
               <li><Link href="/implementation" className="hover:text-white transition-colors">Implementation</Link></li>
               <li><Link href="/security" className="hover:text-white transition-colors">Security</Link></li>

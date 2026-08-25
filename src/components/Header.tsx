@@ -15,11 +15,15 @@ export function Header() {
           <div className="relative group">
             <button className="hover:text-brand-electric transition-colors">By Trade</button>
             <div className="absolute left-0 top-full pt-2 hidden group-hover:block z-50">
-              <div className="bg-white border border-surface-border rounded-lg shadow-lg py-2 w-44">
+              <div className="bg-white border border-surface-border rounded-lg shadow-lg py-2 w-52">
                 <Link href="/for-hvac" className="block px-4 py-2 text-sm hover:bg-surface-light-alt">HVAC</Link>
                 <Link href="/for-plumbing" className="block px-4 py-2 text-sm hover:bg-surface-light-alt">Plumbing</Link>
                 <Link href="/for-electrical" className="block px-4 py-2 text-sm hover:bg-surface-light-alt">Electrical</Link>
                 <Link href="/for-roofing" className="block px-4 py-2 text-sm hover:bg-surface-light-alt">Roofing</Link>
+                <Link href="/for-tree-service" className="block px-4 py-2 text-sm hover:bg-surface-light-alt">Tree Service</Link>
+                <Link href="/for-garage-door" className="block px-4 py-2 text-sm hover:bg-surface-light-alt">Garage Door</Link>
+                <Link href="/for-pest-control" className="block px-4 py-2 text-sm hover:bg-surface-light-alt">Pest Control</Link>
+                <Link href="/for-cleaning-businesses" className="block px-4 py-2 text-sm hover:bg-surface-light-alt">Cleaning</Link>
               </div>
             </div>
           </div>
@@ -28,7 +32,7 @@ export function Header() {
           <Link href="/about" className="hover:text-brand-electric transition-colors">About</Link>
           <Link href="/contact" className="hover:text-brand-electric transition-colors">Contact</Link>
         </nav>
-        <Link href="/pricing" className="btn-primary !px-5 !py-2 !text-sm shrink-0">Start Now</Link>
+        <Link href="/pricing" className="btn-primary !px-5 !py-2 !text-sm shrink-0">Start Setup</Link>
       </div>
     </header>
   )

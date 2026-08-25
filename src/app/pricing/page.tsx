@@ -99,7 +99,7 @@ export default function PricingPage() {
                 ))}
               </ul>
               <Link href={`/start?plan=${p.slug}`} className={p.highlighted ? 'btn-primary text-center' : 'btn-secondary text-center'}>
-                Start Now
+                Start Setup
               </Link>
             </div>
           ))}

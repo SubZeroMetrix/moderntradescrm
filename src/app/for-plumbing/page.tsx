@@ -104,10 +104,10 @@ export default function ForPlumbingPage() {
         </div>
 
         <div className="card-panel bg-gray-50 border-brand-electric/20 text-center mt-12">
-          <p className="text-gray-700 mb-4">See the full capability matrix, or start a conversation about your setup.</p>
+          <p className="text-gray-700 mb-4">Plans start at $99/month. Base pricing, with usage charges disclosed before activation.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/capabilities" className="btn-secondary">Capabilities Matrix</Link>
-            <Link href="/request-access" className="btn-primary">Request Access</Link>
+            <Link href="/pricing" className="btn-secondary">Compare Plans</Link>
+            <Link href="/start" className="btn-primary">Start Setup</Link>
           </div>
         </div>
         <p className="text-xs text-gray-500 mt-8">Last reviewed 2026-08-25.</p>
