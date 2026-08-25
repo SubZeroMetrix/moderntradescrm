@@ -27,12 +27,19 @@ export default function AboutPage() {
             <li>
               <strong>The Modern Trades Mentor</strong> -- local, hands-on contractor consulting in Pinellas County,
               FL, and the team that built this product. TMT consulting is optional; it is not required to use Modern
-              Trades CRM. The Modern Trades Mentor LLC has a{' '}
-              <a href="https://www.bbb.org/us/fl/dunedin/profile/consultant/the-modern-trades-mentor-llc-0653-90465091">BBB Business Profile with BBB Serving West Florida</a>.
+              Trades CRM.
             </li>
             <li><strong>Modern Trades</strong> -- a national contractor growth publication that routes readers here. An affiliate, not an independent third party.</li>
             <li><strong>Metrix Audit</strong> -- a free contractor diagnostic. Also an affiliate.</li>
           </ul>
+
+          <h2>Affiliate Business Standing</h2>
+          <p>
+            The Modern Trades Mentor LLC, an affiliated company, has a{' '}
+            <a href="https://www.bbb.org/us/fl/dunedin/profile/consultant/the-modern-trades-mentor-llc-0653-90465091">BBB Business Profile with BBB Serving West Florida</a>.
+            This profile and its status do not apply to Modern Trades CRM.
+          </p>
+
           <h2>Where We Are</h2>
           <p>
             This is an early product. We describe what&apos;s verified working on the{' '}
