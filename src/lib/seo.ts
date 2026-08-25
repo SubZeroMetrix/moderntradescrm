@@ -24,6 +24,7 @@ export function organizationSchema() {
     name: 'Modern Trades CRM',
     legalName: 'SubZeroMetrix LLC',
     url: SITE_URL,
+    logo: `${SITE_URL}/brand/modern-trades-crm-logo.png`,
     parentOrganization: { '@type': 'Organization', name: 'SubZeroMetrix LLC' },
   }
 }
