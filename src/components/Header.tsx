@@ -11,6 +11,7 @@ export function Header() {
         </Link>
         <nav className="hidden sm:flex items-center gap-8 text-sm font-medium text-gray-600">
           <Link href="/capabilities" className="hover:text-brand-electric transition-colors">Capabilities</Link>
+          <Link href="/revenue-recovery" className="hover:text-brand-electric transition-colors">Revenue Recovery</Link>
           <Link href="/about" className="hover:text-brand-electric transition-colors">About</Link>
           <Link href="/contact" className="hover:text-brand-electric transition-colors">Contact</Link>
         </nav>
