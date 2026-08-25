@@ -27,6 +27,7 @@ export function Header() {
               </div>
             </div>
           </div>
+          <Link href="/compare" className="hover:text-brand-electric transition-colors">Compare</Link>
           <Link href="/implementation" className="hover:text-brand-electric transition-colors">Implementation</Link>
           <Link href="/security" className="hover:text-brand-electric transition-colors">Security</Link>
           <Link href="/about" className="hover:text-brand-electric transition-colors">About</Link>
