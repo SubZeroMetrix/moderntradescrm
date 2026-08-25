@@ -40,3 +40,19 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
     itemListElement: items.map((item, i) => ({ '@type': 'ListItem', position: i + 1, name: item.name, item: `${SITE_URL}${item.url}` })),
   }
 }
+
+export function articleSchema(opts: { headline: string; description: string; path: string; dateModified?: string; reviewedByPractitioner?: boolean }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: opts.headline,
+    description: opts.description,
+    url: `${SITE_URL}${opts.path}`,
+    author: { '@type': 'Organization', name: 'SubZeroMetrix LLC' },
+    publisher: { '@type': 'Organization', name: 'SubZeroMetrix LLC' },
+    ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
+    ...(opts.reviewedByPractitioner
+      ? { reviewedBy: { '@type': 'Person', name: 'Richard Fritzke', jobTitle: 'Recommissioning & Optimization Engineer; 26 years HVAC/R, facilities, and mechanical operations leadership' } }
+      : {}),
+  }
+}

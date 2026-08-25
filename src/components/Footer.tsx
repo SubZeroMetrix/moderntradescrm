@@ -16,6 +16,14 @@ export function Footer() {
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Product</p>
             <ul className="space-y-2 text-sm">
               <li><Link href="/capabilities" className="hover:text-white transition-colors">Capabilities</Link></li>
+              <li><Link href="/revenue-recovery" className="hover:text-white transition-colors">Revenue Recovery</Link></li>
+              <li><Link href="/for-hvac" className="hover:text-white transition-colors">For HVAC</Link></li>
+              <li><Link href="/for-plumbing" className="hover:text-white transition-colors">For Plumbing</Link></li>
+              <li><Link href="/for-electrical" className="hover:text-white transition-colors">For Electrical</Link></li>
+              <li><Link href="/for-roofing" className="hover:text-white transition-colors">For Roofing</Link></li>
+              <li><Link href="/implementation" className="hover:text-white transition-colors">Implementation</Link></li>
+              <li><Link href="/security" className="hover:text-white transition-colors">Security</Link></li>
+              <li><Link href="/support" className="hover:text-white transition-colors">Support</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
