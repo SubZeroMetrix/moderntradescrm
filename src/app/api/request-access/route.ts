@@ -57,11 +57,22 @@ const RATE_LIMIT_MAX = 5
 const rateLimitStore = new Map<string, number[]>()
 
 function isConfigured() {
-  // Genuinely missing, recorded per §13 of the integration contract:
-  // the only existing token is scoped to 01-CORE-DEV, explicitly barred
-  // from real website traffic (§1). No production-authorized token or
-  // subaccount exists yet. Pipeline/stage IDs are also not yet recorded
-  // in the contract (names only) -- both are required, neither exists.
+  // Real blocker (owner-confirmed 2026-08-25): NO AUTHORIZED PRODUCTION GHL
+  // LOCATION EXISTS FOR NATIONAL MODERN TRADES CRM LEADS. This is not just a
+  // missing token:
+  //   - 01-CORE-DEV: test/template subaccount only, never real traffic
+  //   - Arbor Addicts: a real customer account -- CRM-product leads must
+  //     NEVER be sent here, wrong business entirely
+  //   - TMT operating account: a real, existing production business, but
+  //     NOT yet authorized as the Modern Trades CRM national-lead
+  //     destination -- sending there without that authorization would
+  //     contaminate TMT's own operating pipeline
+  //   - Starter plan has no room for a 4th subaccount
+  // Do not connect this route to CORE-DEV or Arbor under any circumstance,
+  // even if a token becomes available for either. Stay disabled until
+  // Terminal 1 supplies all five of: an authorized production locationId,
+  // a token scoped to that location, pipelineId, stageId, and an assigned-
+  // user id if the destination requires one.
   return !!(
     process.env.GHL_PRIVATE_INTEGRATION_TOKEN &&
     process.env.GHL_LOCATION_ID &&
@@ -121,7 +132,7 @@ export async function POST(req: NextRequest) {
   if (!isConfigured()) {
     // Honest, disabled state -- logged with no sensitive data, no attempt
     // to fake a success response.
-    console.log('[request-access] submission received but GHL integration not yet configured (missing production token/location/pipeline IDs) -- not sent anywhere.')
+    console.log('[request-access] submission received but no authorized production GHL location exists for Modern Trades CRM leads -- not sent anywhere, not sent to CORE-DEV or Arbor.')
     return NextResponse.json({
       success: false,
       disabled: true,
