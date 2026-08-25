@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { AttributionCapture } from '@/components/AttributionCapture'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className="antialiased">
         <a href="#main" className="skip-link">Skip to main content</a>
+        <AttributionCapture />
         <Header />
         <main id="main">{children}</main>
         <Footer />

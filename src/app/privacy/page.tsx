@@ -18,7 +18,16 @@ export default function PrivacyPage() {
         <div className="prose-content">
           <p>Modern Trades CRM is offered nationally by SubZeroMetrix LLC, built by The Modern Trades Mentor.</p>
           <h2>Analytics</h2>
-          <p>This site uses privacy-conscious analytics (Vercel Analytics) to understand aggregate traffic. It does not use tracking cookies or sell any data.</p>
+          <p>This site uses privacy-conscious analytics (Vercel Analytics) to understand aggregate traffic. We do not use third-party advertising or cross-site tracking cookies, and we do not sell any data.</p>
+          <h2>First-Touch Attribution Cookie</h2>
+          <p>
+            This site sets a first-party cookie (<code>mt_first_touch</code>, and a same-purpose
+            <code>mt_last_touch</code> cookie) to remember, for up to 90 days, which page and marketing source you
+            first arrived from -- including if you arrived here from Modern Trades or Metrix Audit. This helps us
+            understand which source and content actually leads to a real inquiry. It never includes anything you
+            type into the capabilities matrix or any tool, and is not shared with any advertising network. Set with
+            <code>SameSite=Lax</code>.
+          </p>
           <h2>Contact Information</h2>
           <p>If you contact us through the SubZeroMetrix.com contact form linked from this site, that submission is governed by <a href="https://www.subzerometrix.com/privacy">SubZeroMetrix&apos;s privacy policy</a>.</p>
           <h2>Product Data</h2>
